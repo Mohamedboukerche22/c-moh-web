@@ -4,142 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>C-moh Language</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-dark.min.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 <body>
   <style>
     /* Reset & fonts */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background: #f4f7fa;
-  color: #222;
-  line-height: 1.6;
-}
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0d0d0d;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
-.navbar .logo {
-  color: #00aaff;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
+    .navbar .logo {
+      color: #00aaff;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    .nav-links a {
+      color: #d0d0d0;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-.nav-links a:hover {
-  color: #00aaff;
-}
+    .nav-links a:hover {
+      color: #00aaff;
+    }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, #00aaff, #0066ff);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0077b6, #023e8a);
+      color: #e0e0e0;
+      text-align: center;
+      padding: 80px 20px;
+    }
 
-header h1 {
-  font-size: 3rem;
-}
+    header h1 {
+      font-size: 3rem;
+    }
 
-header p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #fff;
-  color: #0066ff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: all 0.3s;
-  font-weight: bold;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #2a2a2a;
+      color: #00aaff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.btn:hover {
-  background: #e0e0e0;
-  color: #003388;
-}
+    .btn:hover {
+      background: #3a3a3a;
+      color: #66ccff;
+    }
 
-/* Section Styles */
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
-}
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
 
-section h2 {
-  border-left: 5px solid #00aaff;
-  padding-left: 10px;
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-}
+    section h2 {
+      border-left: 5px solid #00aaff;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
 
-.features-list {
-  list-style: none;
-  padding-left: 0;
-}
+    .features-list {
+      list-style: none;
+      padding-left: 0;
+    }
 
-.features-list li {
-  background: #e8f6ff;
-  margin: 10px 0;
-  padding: 10px 15px;
-  border-left: 4px solid #00aaff;
-  border-radius: 5px;
-}
+    .features-list li {
+      background: #2a2a2a;
+      margin: 10px 0;
+      padding: 10px 15px;
+      border-left: 4px solid #00aaff;
+      border-radius: 5px;
+    }
 
-/* Code */
-pre {
-  background: #2d2d2d;
-  color: #f8f8f2;
-  padding: 20px;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: 'Fira Code', monospace;
-}
+    /* Code */
+    pre, textarea {
+      background: #1e1e1e;
+      color: #f8f8f2;
+      padding: 20px;
+      border-radius: 8px;
+      font-family: 'Fira Code', monospace;
+      font-size: 1rem;
+    }
 
-/* Footer */
-footer {
-  background: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
+    textarea {
+      width: 100%;
+      min-height: 200px;
+      resize: vertical;
+      border: none;
+      outline: none;
+    }
 
+    #output {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+      min-height: 100px;
+    }
+
+    /* Footer */
+    footer {
+      background: #0d0d0d;
+      color: #d0d0d0;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #66ccff;
+    }
   </style>
 
   <nav class="navbar">
@@ -195,7 +218,17 @@ END
 
   <section id="try" data-aos="fade-up">
     <h2>🧪 Try It Online</h2>
-    <iframe src="https://replit.com/@mohamedboukerch/AridGivingSequel" width="100%" height="500" frameborder="0"></iframe>
+    <textarea id="codeInput" placeholder="Write your C-moh code here...">
+let x = 3
+print "Start Loop"
+while x > 0:
+    print x
+    x = x - 1
+print "Done"
+END
+    </textarea>
+    <button class="btn" onclick="runCode()">Run Code</button>
+    <div id="output">Output will appear here...</div>
   </section>
 
   <footer>
@@ -204,9 +237,110 @@ END
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+  <script>
+    AOS.init();
 
+    function runCode() {
+      const code = document.getElementById('codeInput').value;
+      const outputDiv = document.getElementById('output');
+      outputDiv.innerHTML = '';
+
+      try {
+        const output = interpretCmo(code);
+        outputDiv.innerHTML = output.join('<br>');
+      } catch (error) {
+        outputDiv.innerHTML = `<span style="color: #ff5555;">Error: ${error.message}</span>`;
+      }
+    }
+
+    function interpretCmo(code) {
+      const lines = code.split('\n').map(line => line.trimEnd());
+      const variables = {};
+      const output = [];
+      let i = 0;
+
+      function evaluateExpression(expr) {
+        expr = expr.trim();
+        if (!isNaN(expr)) return Number(expr);
+        if (expr.startsWith('"') && expr.endsWith('"')) return expr.slice(1, -1);
+        if (variables[expr] !== undefined) return variables[expr];
+
+        // Handle basic arithmetic (e.g., x - 1)
+        const parts = expr.split(/\s+/);
+        if (parts.length === 3 && parts[1] === '-') {
+          const left = evaluateExpression(parts[0]);
+          const right = evaluateExpression(parts[2]);
+          if (typeof left === 'number' && typeof right === 'number') {
+            return left - right;
+          }
+        }
+        throw new Error(`Invalid expression: ${expr}`);
+      }
+
+      while (i < lines.length) {
+        let line = lines[i].trim();
+        if (line === '' || line === 'END') {
+          i++;
+          continue;
+        }
+
+        // Handle indentation
+        const indentLevel = lines[i].length - lines[i].trimStart().length;
+        const isIndented = indentLevel > 0;
+
+        if (line.startsWith('let ')) {
+          const [_, varName, eq, value] = line.split(/(\w+)\s*=\s*/);
+          if (eq !== '=') throw new Error(`Invalid assignment at line ${i + 1}`);
+          variables[varName.trim()] = evaluateExpression(value);
+          i++;
+        } else if (line.startsWith('print ')) {
+          const value = line.slice(6).trim();
+          const result = evaluateExpression(value);
+          output.push(result);
+          i++;
+        } else if (line.startsWith('while ')) {
+          const condition = line.slice(6).split(':')[0].trim();
+          const [left, op, right] = condition.split(/\s+/);
+          if (op !== '>') throw new Error(`Unsupported operator at line ${i + 1}`);
+
+          const block = [];
+          let blockIndent = -1;
+          i++;
+          while (i < lines.length && (lines[i].trim() === '' || (lines[i].length - lines[i].trimStart().length) > indentLevel)) {
+            if (lines[i].trim() !== '') {
+              if (blockIndent === -1) blockIndent = lines[i].length - lines[i].trimStart().length;
+              if ((lines[i].length - lines[i].trimStart().length) !== blockIndent) {
+                throw new Error(`Inconsistent indentation at line ${i + 1}`);
+              }
+              block.push(lines[i]);
+            }
+            i++;
+          }
+          i--;
+
+          // Evaluate while loop
+          while (evaluateExpression(left) > evaluateExpression(right)) {
+            for (let j = 0; j < block.length; j++) {
+              const blockLine = block[j].trim();
+              if (blockLine.startsWith('print ')) {
+                const value = blockLine.slice(6).trim();
+                output.push(evaluateExpression(value));
+              } else if (blockLine.includes('=')) {
+                const [varName, value] = blockLine.split(/\s*=\s*/);
+                variables[varName.trim()] = evaluateExpression(value);
+              } else {
+                throw new Error(`Unsupported statement in loop at line ${j + 1}`);
+              }
+            }
+          }
+          i++;
+        } else {
+          throw new Error(`Unknown statement at line ${i + 1}: ${line}`);
+        }
+      }
+
+      return output;
+    }
+  </script>
 </body>
 </html>
