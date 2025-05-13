@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>C-moh Language</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+  <style>
+    /* Reset & fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  color: #00aaff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #00aaff, #0066ff);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background: #fff;
+  color: #0066ff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #e0e0e0;
+  color: #003388;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  border-left: 5px solid #00aaff;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.features-list li {
+  background: #e8f6ff;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-left: 4px solid #00aaff;
+  border-radius: 5px;
+}
+
+/* Code */
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+  </style>
+
+  <nav class="navbar">
+    <div class="logo">C-moh</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#example">Example</a></li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="#try">Try</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>C-moh Programming Language</h1>
+    <p>A custom English-like programming language built in C++</p>
+    <a href="#try" class="btn">Try It Online</a>
+  </header>
+
+  <section id="about">
+    <h2>🌟 What is C-moh?</h2>
+    <p>C-moh is a beginner-friendly, English-style programming language written in C++ and inspired by Python’s readability.</p>
+  </section>
+
+  <section id="features">
+    <h2>🚀 Features</h2>
+    <ul class="features-list">
+      <li>✅ Python-like syntax</li>
+      <li>✅ Variables, Print, If/While</li>
+      <li>✅ Indentation-based structure</li>
+      <li>✅ Easy to extend and experiment with</li>
+    </ul>
+  </section>
+
+  <section id="example">
+    <h2>📄 Example Code</h2>
+    <pre><code class="language-python">
+let x = 3
+print "Start Loop"
+while x > 0:
+    print x
+    x = x - 1
+print "Done"
+END
+    </code></pre>
+  </section>
+
+  <section id="download">
+    <h2>📥 Download</h2>
+    <p>Grab the full source code on GitHub:</p>
+    <a href="https://github.com/yourusername/c-moh" class="btn">GitHub Repo</a>
+  </section>
+
+  <section id="try">
+    <h2>🧪 Try It Online</h2>
+    <iframe src="https://replit.com/@yourusername/C-moh?embed=true" width="100%" height="500" frameborder="0"></iframe>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by <strong>You</strong> | <a href="https://github.com/yourusername/c-moh">GitHub</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
